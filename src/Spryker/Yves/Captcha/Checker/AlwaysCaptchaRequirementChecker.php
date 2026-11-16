@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * Copyright © 2016-present Spryker Systems GmbH. All rights reserved.
+ * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
+ */
+
+namespace Spryker\Yves\Captcha\Checker;
+
+use Generated\Shared\Transfer\CaptchaRequirementRequestTransfer;
+
+class AlwaysCaptchaRequirementChecker implements CaptchaRequirementCheckerInterface
+{
+    public function isCaptchaRequired(CaptchaRequirementRequestTransfer $captchaRequirementRequestTransfer): bool
+    {
+        return true;
+    }
+}

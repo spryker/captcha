@@ -1,0 +1,20 @@
+captcha.error.required,"Please complete the security check."
+captcha.error.invalid,"The security check could not be verified. Please try again."
+captcha.error.expired,"The security check has expired. Please try again."
+captcha.error.unavailable,"The security check is currently unavailable. Please try again later."
+captcha.noscript,"Please enable JavaScript to complete the security check."
+Security,Security
+"Protection of the Storefront, Back Office and Merchant Portal login forms.","Protection of the Storefront, Back Office and Merchant Portal login forms."
+CAPTCHA,CAPTCHA
+"When the login forms ask for a CAPTCHA.","When the login forms ask for a CAPTCHA."
+"Login Forms","Login Forms"
+"CAPTCHA of the Storefront customer and agent, Back Office, Merchant Portal and Merchant Portal agent login forms. The CAPTCHA provider is set up under Integrations.","CAPTCHA of the Storefront customer and agent, Back Office, Merchant Portal and Merchant Portal agent login forms. The CAPTCHA provider is set up under Integrations."
+"Enable CAPTCHA","Enable CAPTCHA"
+"Turns the CAPTCHA of the login forms on or off. Turning it on requires a CAPTCHA provider that is set up under Integrations.","Turns the CAPTCHA of the login forms on or off. Turning it on requires a CAPTCHA provider that is set up under Integrations."
+"CAPTCHA Mode","CAPTCHA Mode"
+"After Failed Attempts asks for a CAPTCHA only after the failed logins reach a Security Check limit on the Login Lock tab. Always asks for it on every login.","After Failed Attempts asks for a CAPTCHA only after the failed logins reach a Security Check limit on the Login Lock tab. Always asks for it on every login."
+"Open the Login Lock tab","Open the Login Lock tab"
+Always,Always
+"After Failed Attempts","After Failed Attempts"
+"Must be one of the supported CAPTCHA modes.","Must be one of the supported CAPTCHA modes."
+"Set up the CAPTCHA provider under Integrations before turning on the CAPTCHA.","Set up the CAPTCHA provider under Integrations before turning on the CAPTCHA."

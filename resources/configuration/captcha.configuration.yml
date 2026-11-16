@@ -1,0 +1,68 @@
+# yaml-language-server: $schema=../../../Configuration/resources/configuration/configuration-schema-v1.json
+features:
+    - key: security
+      name: Security
+      description: Protection of the Storefront, Back Office and Merchant Portal login forms.
+      enabled: true
+      order: 90
+      tabs:
+          - key: captcha
+            name: CAPTCHA
+            description: When the login forms ask for a CAPTCHA.
+            enabled: true
+            order: 10
+            groups:
+                - key: login
+                  name: Login Forms
+                  description: CAPTCHA of the Storefront customer and agent, Back Office, Merchant Portal and Merchant Portal agent login forms. The CAPTCHA provider is set up under Integrations.
+                  enabled: true
+                  order: 0
+                  scopes:
+                      - global
+                  settings:
+                      - key: is_enabled
+                        name: Enable CAPTCHA
+                        description: Turns the CAPTCHA of the login forms on or off. Turning it on requires a CAPTCHA provider that is set up under Integrations.
+                        type: boolean
+                        default_value: 'false'
+                        enabled: true
+                        secret: false
+                        storefront: true
+                        order: 0
+                        scopes:
+                            - global
+                        constraints:
+                            - type: 'Spryker\Zed\Captcha\Communication\Constraint\CaptchaProviderConfiguredConstraint'
+                      - key: mode
+                        name: CAPTCHA Mode
+                        description: After Failed Attempts asks for a CAPTCHA only after the failed logins reach a Security Check limit on the Login Lock tab. Always asks for it on every login.
+                        link:
+                            label: Open the Login Lock tab
+                            feature: security
+                            tab: login_lock
+                        type: radio
+                        default_value: after_failed_attempts
+                        enabled: true
+                        secret: false
+                        storefront: true
+                        order: 10
+                        scopes:
+                            - global
+                        dependencies:
+                            - when:
+                                  any:
+                                      - setting: security:captcha:login:is_enabled
+                                        operator: equals
+                                        value: 'true'
+                        options:
+                            - value: always
+                              label: Always
+                            - value: after_failed_attempts
+                              label: After Failed Attempts
+                        constraints:
+                            - type: choice
+                              message: Must be one of the supported CAPTCHA modes.
+                              options:
+                                  choices:
+                                      - always
+                                      - after_failed_attempts

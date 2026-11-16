@@ -1,0 +1,20 @@
+captcha.error.required,"Bitte schließen Sie die Sicherheitsprüfung ab."
+captcha.error.invalid,"Die Sicherheitsprüfung konnte nicht bestätigt werden. Bitte versuchen Sie es erneut."
+captcha.error.expired,"Die Sicherheitsprüfung ist abgelaufen. Bitte versuchen Sie es erneut."
+captcha.error.unavailable,"Die Sicherheitsprüfung ist derzeit nicht verfügbar. Bitte versuchen Sie es später erneut."
+captcha.noscript,"Bitte aktivieren Sie JavaScript, um die Sicherheitsprüfung abzuschließen."
+Security,Sicherheit
+"Protection of the Storefront, Back Office and Merchant Portal login forms.","Schutz der Anmeldeformulare von Storefront, Back Office und Merchant Portal."
+CAPTCHA,CAPTCHA
+"When the login forms ask for a CAPTCHA.","Wann die Anmeldeformulare ein CAPTCHA verlangen."
+"Login Forms",Anmeldeformulare
+"CAPTCHA of the Storefront customer and agent, Back Office, Merchant Portal and Merchant Portal agent login forms. The CAPTCHA provider is set up under Integrations.","CAPTCHA der Anmeldeformulare für Storefront-Kunden und -Agenten, Back Office, Merchant Portal und Merchant-Portal-Agenten. Der CAPTCHA-Anbieter wird unter Integrationen eingerichtet."
+"Enable CAPTCHA","CAPTCHA aktivieren"
+"Turns the CAPTCHA of the login forms on or off. Turning it on requires a CAPTCHA provider that is set up under Integrations.","Schaltet das CAPTCHA der Anmeldeformulare ein oder aus. Zum Einschalten muss ein CAPTCHA-Anbieter unter Integrationen eingerichtet sein."
+"CAPTCHA Mode",CAPTCHA-Modus
+"After Failed Attempts asks for a CAPTCHA only after the failed logins reach a Security Check limit on the Login Lock tab. Always asks for it on every login.","Nach Fehlversuchen verlangt ein CAPTCHA erst, wenn die fehlgeschlagenen Anmeldungen eine Grenze der Sicherheitsprüfung auf dem Tab Anmeldesperre erreichen. Immer verlangt es bei jeder Anmeldung."
+"Open the Login Lock tab","Tab Anmeldesperre öffnen"
+Always,Immer
+"After Failed Attempts","Nach Fehlversuchen"
+"Must be one of the supported CAPTCHA modes.","Muss einer der unterstützten CAPTCHA-Modi sein."
+"Set up the CAPTCHA provider under Integrations before turning on the CAPTCHA.","Richten Sie den CAPTCHA-Anbieter unter Integrationen ein, bevor Sie das CAPTCHA einschalten."

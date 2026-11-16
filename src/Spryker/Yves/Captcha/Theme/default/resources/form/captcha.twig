@@ -1,0 +1,28 @@
+{% block captcha_widget %}
+    {% if captchaWidget is not null %}
+        {% set captchaWidgetElement %}
+            <{{ captchaWidget.tagName }}
+                {%- for attributeName, attributeValue in captchaWidget.attributes %} {{ attributeName }}="{{ attributeValue }}"{% endfor %} {{ captchaWidget.nameAttribute }}="{{ full_name }}" data-qa="captcha-widget"></{{ captchaWidget.tagName }}>
+        {% endset %}
+
+        {% if captchaWidget.loaderTagName is not empty %}
+            <{{ captchaWidget.loaderTagName }}>{{ captchaWidgetElement }}</{{ captchaWidget.loaderTagName }}>
+        {% else %}
+            {{ captchaWidgetElement }}
+        {% endif %}
+
+        <noscript>{{ 'captcha.noscript' | trans }}</noscript>
+
+        {% for scriptUrl in captchaWidget.scriptUrls %}
+            <script src="{{ scriptUrl }}" async defer></script>
+        {% endfor %}
+    {% endif %}
+
+    {% if captchaMessages | length > 0 %}
+        <ul class="list list--bullet list--alert">
+            {% for messageTransfer in captchaMessages %}
+                <li class="list__item">{{ messageTransfer.value | trans }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,21 @@
+{% block captcha_widget %}
+    {% if captchaWidget is not null %}
+        <{{ captchaWidget.tagName }}
+            {%- for attributeName, attributeValue in captchaWidget.attributes %} {{ attributeName }}="{{ attributeValue }}"{% endfor %} {{ captchaWidget.nameAttribute }}="{{ full_name }}" data-qa="captcha-widget"></{{ captchaWidget.tagName }}>
+        <noscript>{{ 'captcha.noscript' | trans }}</noscript>
+
+        {% for scriptUrl in captchaWidget.scriptUrls %}
+            <script src="{{ scriptUrl }}" async defer></script>
+        {% endfor %}
+
+        {% if includeScriptAssets %}
+            {% for scriptAssetPath in captchaWidget.scriptAssetPaths %}
+                <script src="{{ assetsPath(scriptAssetPath) }}"></script>
+            {% endfor %}
+        {% endif %}
+    {% endif %}
+
+    {% for messageTransfer in captchaMessages %}
+        <div class="invalid-feedback d-block">{{ messageTransfer.value | trans }}</div>
+    {% endfor %}
+{% endblock %}
